@@ -1,0 +1,23 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        int temp, reminder, sum=0, lengthOfInt;
+        temp=x; 
+        int result = Integer.signum(x);
+         while(x>0) {
+            reminder= x%10 ;
+            sum= (sum*10)+ reminder;
+            x=x/10;
+         }
+         if( temp==sum ) {
+             System.out.println("palindrome number "); 
+             return true;
+         }
+         else {
+             System.out.println("Number is not palindrome "); 
+             return false;
+ 
+         }
+     
+    }
+ 
+}
