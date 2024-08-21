@@ -1,0 +1,30 @@
+class Solution {
+    public boolean isHappy(int n) {
+        int sum=0;
+        int Happy=n;
+        do
+        {
+                     int Reminder;
+                      while (n != 0) 
+                        {
+                         sum=0;
+                         Reminder= n%10 ;
+                         sum = sum+( Reminder*Reminder);
+                         n=n/10;
+                        }
+                        n=sum;
+                        System.out.println("sum"+ sum);
+        }while (sum>6);
+         boolean result ;
+         if (sum == 1) {
+            result=true;
+            System.out.println(Happy + " is a Happy Number");
+                       }
+        else {
+            System.out.println(Happy + " is not a Happy Number");
+             result=false;
+             }
+     return result ;
+    }
+
+}

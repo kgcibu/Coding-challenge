@@ -1,0 +1,25 @@
+class Solution {
+    public int lengthOfLastWord(String s) {
+        int Answer=0;
+        int Final=0;
+  if(s != null)
+   {
+        for(int i = 0; i < s.length(); i++)
+        {
+            if(Character.isWhitespace(s.charAt(i)))
+            {
+                Answer=0;
+            }     
+            else 
+            {
+                Answer=Answer+1;
+                Final=Answer;
+            } 
+        }
+      
+      System.out.println(" Final is " + Final);
+    }
+   return Final ;
+ }
+ 
+}
